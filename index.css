@@ -16,6 +16,10 @@ button {
 	padding: 2px 8px;
 }
 
+button:hover {
+	box-shadow: none;
+}
+
 h3 {
 	border: 1px solid #bebebe;
 	font-family: 'Arial', sans-serif;
