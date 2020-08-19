@@ -23,5 +23,6 @@ button:hover {
 h3 {
 	border: 1px solid #bebebe;
 	font-family: 'Arial', sans-serif;
+	font-weight: lighter;
 	padding: 20px;
 }
