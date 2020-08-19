@@ -21,7 +21,10 @@ const handleClick = () => {
 }
 
 const addRows = (value) => {
+	/* Takes the button's class name (either 'hello' or 'goodbye') and capitalizes 
+	the first letter to be used as the text */
 	let text = `${value.charAt(0).toUpperCase()}${value.slice(1, value.length)}`;
+
 	for (let i = 0; i < 5; i++) {
 		rows.innerHTML += `<h3>${text}</h3>`;
 	}
