@@ -1,15 +1,16 @@
-window.onload = () => {
-	document.querySelectorAll('button').forEach(
-		b => b.addEventListener('click', handleClick)
-	);
-};
+window.onload = function() {
+	var buttons = document.querySelectorAll('button');
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', handleClick);
+	}
+}
 
-const handleClick = () => {
-	const rows = document.querySelector('#rows');
-	let cls = event.target.classList.value;
-
-	if (rows.classList.contains('hidden')) {
-		rows.classList.remove('hidden');
+function handleClick() {
+	var rows = document.querySelector('#rows');
+	var cls = this.className;
+	
+	if (rows.className === 'hidden' ) {
+		rows.className = 'show';
 	}
 
 	if (rows.innerHTML) {
@@ -20,12 +21,12 @@ const handleClick = () => {
 	}
 }
 
-const addRows = (value) => {
+function addRows(value) {
 	/* Takes the button's class name (either 'hello' or 'goodbye') and capitalizes 
 	the first letter to be used as the text */
-	let text = `${value.charAt(0).toUpperCase()}${value.slice(1, value.length)}`;
+	var text = value.charAt(0).toUpperCase() + value.slice(1, value.length);
 
-	for (let i = 0; i < 5; i++) {
-		rows.innerHTML += `<h3>${text}</h3>`;
+	for (var i = 0; i < 5; i++) {
+		rows.innerHTML += '<h3>' + text + '</h3>';
 	}
-};
+}
