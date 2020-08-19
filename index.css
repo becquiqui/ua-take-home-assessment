@@ -1,6 +1,6 @@
 #rows {
 	margin: 5px 10px;
-	width: 98%;
+	max-width: 600px;
 }
 
 .hidden {
